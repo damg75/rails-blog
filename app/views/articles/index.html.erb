@@ -1,0 +1,10 @@
+Articles#index
+<br>
+<% if @articles %>
+    <% @articles.each do |a| %>
+        <%= a.title %>
+        <br>
+    <% end %>
+<% end %>
+<br>
+<%= link_to 'New Article', new_article_path %>

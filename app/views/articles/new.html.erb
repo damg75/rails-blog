@@ -1,0 +1,12 @@
+Articles#New  
+<%= form_with(model: @article, local: true) do |form| %>
+    <div>
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+    </div>
+
+    <div>
+        <%= form.submit 'Enviar' %>
+    </div>
+
+<% end %>
