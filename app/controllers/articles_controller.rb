@@ -11,6 +11,7 @@ class ArticlesController < ApplicationController
 
     def create
         @article = Article.new(article_params)
+        @article.user_id = current_user.id
         if @article.save
             redirect_to articles_path, notice: "Categoría creada"
         else
@@ -35,6 +36,11 @@ class ArticlesController < ApplicationController
     def destroy
         @article.destroy
         redirect_to articles_path, alert: "Artículo eliminado"
+    end
+
+    def from_author
+        @user = User.find(params[:user_id])
+        @articles = @user.articles
     end
 
     private
