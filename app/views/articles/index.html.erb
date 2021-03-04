@@ -2,7 +2,7 @@ Articles#index
 <br>
 <% if @articles %>
     <% @articles.each do |a| %>
-        <%= a.title %>
+        <%= link_to a.title, article_path(a) %>
         <br>
     <% end %>
 <% end %>
