@@ -2,4 +2,10 @@ Articles#Show
 <br>
 <%= @article.title %>
 <br>
+<%= @article.content %>
+<br>
+<%= link_to 'Editar', edit_article_path(@article) %>
+<br>
+<%= link_to 'Eliminar', article_path(@article), method: :delete, data: { confirm: "¿Eliminar Artículo?" } %>
+<br>
 <%= link_to 'Regresar', articles_path %>
