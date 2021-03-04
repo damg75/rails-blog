@@ -1,10 +1,7 @@
 Articles#index
 <br>
 <% if @articles %>
-    <% @articles.each do |a| %>
-        <%= link_to a.title, article_path(a) %>
-        <br>
-    <% end %>
+    <%= render @articles %>
 <% end %>
 <br>
 <%= link_to 'New Article', new_article_path %>
