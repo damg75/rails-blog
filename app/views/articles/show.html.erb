@@ -2,6 +2,12 @@ Articles#Show
 <br>
 <%= @article.title %>
 <br>
+<% @article.categories.each do |category| %>
+    <span class="badge badge-pill padding" style="background-color: <%= category.color %>">
+        <p><%= link_to category.title, category %></p>
+    </span>
+<% end %>
+<br>
 <%= @article.content %>
 <br>
 <%= link_to 'Editar', edit_article_path(@article) %>
