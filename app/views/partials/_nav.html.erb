@@ -5,10 +5,10 @@
     <li class="nav-item">
         <%= link_to 'Artículos', articles_path, class: "nav-link" %>
     </li>
-    <li class="nav-item">
-        <%= link_to 'Nuevo Blog', new_article_path, class: "nav-link" %>
-    </li>
     <% unless current_user %>
+        <li class="nav-item">
+            <%= link_to 'Nuevo Blog', new_article_path, class: "nav-link" %>
+        </li>
         <li class="nav-item">
             <%= link_to 'Sign Up', new_user_registration_path, class: "nav-link" %>
         </li>
